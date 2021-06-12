@@ -1,2 +1,3 @@
 # projetoIA2020-02
-# luis fernando feitosa
+# Alunos:
+# Luis Fernando Feitosa
