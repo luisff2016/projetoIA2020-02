@@ -6,18 +6,27 @@ import java.util.Hashtable;
 import java.util.List;
 
 /**
- * Artificial Intelligence A Modern Approach (3rd Ed.): Section 6.1, Page 202.<br>
- * <br>
- * A constraint satisfaction problem or CSP consists of three components, X, D,
- * and C:
+ * Artificial Intelligence A Modern Approach (3rd Ed.): Section 6.1, Page 202.
+ * 
+ * A constraint satisfaction problem or CSP consists of three components, X, D, and C:
  * <ul>
  * <li>X is a set of variables, {X1, ... ,Xn}.</li>
  * <li>D is a set of domains, {D1, ... ,Dn}, one for each variable.</li>
  * <li>C is a set of constraints that specify allowable combinations of values.</li>
  * </ul>
- *
  * @param <VAR> Type which is used to represent variables
  * @param <VAL> Type which is used to represent the values in the domains
+ * 
+ * Um problema de satisfação de restrição ou CSP consiste em três componentes, X, D e C:
+  * <ul>
+  * <li> X é um conjunto de variáveis, {X1, ..., Xn}. </li>
+  * <li> D é um conjunto de domínios, {D1, ..., Dn}, um para cada variável. </li>
+  * <li> C é um conjunto de restrições que especificam combinações permitidas de valores. </li>
+  * </ul>
+  * @param <VAR> Tipo que é usado para representar variáveis
+  * @param <VAL> Tipo que é usado para representar os valores nos domínios
+ *
+ 
  *
  * @author Ruediger Lunde
  */

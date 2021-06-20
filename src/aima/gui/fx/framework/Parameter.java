@@ -12,6 +12,12 @@ import java.util.stream.Collectors;
  * are not specified, a default value description is generated following a
  * name-value equation pattern.
  * 
+ * Parâmetro para experimentos de simulação. Um parâmetro possui um nome exclusivo,
+ * uma sequência finita de valores e uma sequência finita de nomes de valor. 
+ * Um valor padrão pode ser especificado. Caso contrário, o primeiro valor é o valor padrão. 
+ * Se os nomes dos valores não forem especificados, 
+ * uma descrição do valor padrão será gerada seguindo um padrão de equação nome-valor.
+ * 
  * @author Ruediger Lunde
  */
 public class Parameter {

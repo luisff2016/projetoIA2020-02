@@ -1,18 +1,23 @@
 package aima.core.search.csp.solver;
 
-import aima.core.search.csp.Assignment;
-import aima.core.search.csp.CSP;
-import aima.core.search.csp.Variable;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+
+import aima.core.search.csp.Assignment;
+import aima.core.search.csp.CSP;
+import aima.core.search.csp.Variable;
 
 /**
  * Base class for CSP solver implementations. Solving a CSP means finding an
  * assignment, which is consistent and complete with respect to a CSP. This
  * abstract class provides the central interface method and additionally an
  * implementation of an observer mechanism.
+ * 
+ * Classe base para implementações do solver CSP. 
+ * Resolver um CSP significa encontrar uma atribuição que seja consistente e completa em relação a um CSP.
+ * Essa classe abstrata fornece o método de interface central e, adicionalmente, 
+ * uma implementação de um mecanismo de observador.
  *
  * @param <VAR> Type which is used to represent variables
  * @param <VAL> Type which is used to represent the values in the domains

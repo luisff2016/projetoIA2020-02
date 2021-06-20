@@ -10,6 +10,8 @@ import aima.core.search.csp.Variable;
 /**
  * Represents a binary constraint which forbids equal values.
  * 
+ * Representa uma restrição binária que proíbe valores iguais.
+ * 
  * @author Ruediger Lunde
  */
 public class NotEqualConstraint<VAR extends Variable, VAL> implements Constraint<VAR, VAL> {

@@ -1,17 +1,22 @@
 package aima.core.search.csp.examples;
 
+import java.util.Arrays;
+
 import aima.core.search.csp.CSP;
 import aima.core.search.csp.Domain;
 import aima.core.search.csp.Variable;
 
-import java.util.Arrays;
-
 /**
- * Artificial Intelligence A Modern Approach (3rd Ed.): Figure 6.1, Page 204.<br>
+ * Artificial Intelligence A Modern Approach (3rd Ed.): Figure 6.1, Page
+ * 204.<br>
  * <br>
  * The principal states and territories of Australia. Coloring this map can be
  * viewed as a constraint satisfaction problem (CSP). The goal is to assign
  * colors to each region so that no neighboring regions have the same color.
+ * 
+ * Os principais estados e territórios da Austrália. Colorir este mapa pode ser
+ * visto como um problema de satisfação de restrição (CSP). 
+ * O objetivo é atribuir cores a cada região para que nenhuma região vizinha tenha a mesma cor.
  * 
  * @author Ruediger Lunde
  * @author Mike Stampone
@@ -34,9 +39,11 @@ public class MapCSP extends CSP<Variable, String> {
 	 * Australia, with the colors Red, Green, and Blue.
 	 */
 	public MapCSP() {
+		
 		super(Arrays.asList(NSW, WA, T, NT, Q, SA, V));
 
 		Domain<String> colors = new Domain<>(RED, GREEN, BLUE);
+		
 		for (Variable var : getVariables())
 			setDomain(var, colors);
 

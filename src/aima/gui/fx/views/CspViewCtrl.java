@@ -104,7 +104,7 @@ public class CspViewCtrl<VAR extends Variable, VAL> {
             label += " = " + value;
             fillColor = colorMapping.get(value);
         }
-        Circle circle = new Circle(pos.getX(), pos.getY(), 20);
+        Circle circle = new Circle(pos.getX(), pos.getY(), 10);
         circle.setStroke(Color.BLACK);
         circle.setFill(fillColor != null ? fillColor : Color.WHITE);
         Text t1 = new Text(pos.getX() + 25, pos.getY(), label);
@@ -164,8 +164,8 @@ public class CspViewCtrl<VAR extends Variable, VAL> {
         else {
             int vIndex = csp.indexOf(var);
             int rows = Math.max((int) (pane.getHeight() / 100), 1);
-            int x = (vIndex / rows) * 160 + 40;
-            int y = (vIndex % rows) * 100 + 40;
+            int x = (vIndex / rows) * 160;
+            int y = (vIndex % rows) * 100;
             return new Point2D(x, y);
         }
     }

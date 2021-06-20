@@ -7,11 +7,17 @@ import java.util.List;
 import aima.core.util.ArrayIterator;
 
 /**
- * A domain Di consists of a set of allowable values {v1, ... , vk} for the
- * corresponding variable Xi and defines a default order on those values. This
- * implementation guarantees, that domains are never changed after they have
- * been created. Domain reduction is implemented by replacement instead of
- * modification. So previous states can easily and safely be restored.
+ * A domain Di consists of a set of allowable values {v1, ... , vk}
+ * for the corresponding variable Xi and defines a default order on those values. 
+ * This implementation guarantees, that domains are never changed after they have been created. 
+ * Domain reduction is implemented by replacement instead of modification. 
+ * So previous states can easily and safely be restored.
+ * 
+ * Um domínio Di consiste em um conjunto de valores permitidos {v1, ..., vk} 
+ * para a variável correspondente Xi e define uma ordem padrão nesses valores. 
+ * Essa implementação garante que os domínios nunca sejam alterados depois de criados. 
+ * A redução de domínio é implementada por substituição em vez de modificação. 
+ * Assim, os estados anteriores podem ser restaurados com facilidade e segurança.
  * 
  * @author Ruediger Lunde
  */
