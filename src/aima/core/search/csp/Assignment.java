@@ -103,7 +103,7 @@ public class Assignment<VAR extends Variable, VAL> implements Cloneable {
 
 		}
 
-		for (int i = 0; i < 21; i++) {
+		for (int i = 0; i < 20; i++) {
 
 			if (i % 2 == 0)
 				hora++;

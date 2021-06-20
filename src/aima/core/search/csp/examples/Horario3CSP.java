@@ -23,6 +23,7 @@ import aima.core.search.csp.Variable;
  * @author Mike Stampone
  */
 public class Horario3CSP extends CSP<Variable, String> {
+	boolean sabado;
 
 	public static final Variable SEG = new Variable("SEGUNDA");
 	public static final Variable TER = new Variable("TERCA");
@@ -63,7 +64,7 @@ public class Horario3CSP extends CSP<Variable, String> {
 //	public static final String[] EVENTO = { "EVENTO", "0" };
 //	public static final String[] BLOCO = { "ESTUDO", "1" };
 //	public static final String[] OUTROS = { "ESTUDO", "0" }; // default
-	
+
 	public static final String COMP0455 = "COMP0455";
 	public static final String COMP0481 = "COMP0481";
 	public static final String COMP0408 = "COMP0408";
@@ -95,16 +96,39 @@ public class Horario3CSP extends CSP<Variable, String> {
 	 * with the colors Red, Green, and Blue.
 	 */
 	public Horario3CSP() {
+
+		super(Arrays.asList(SEG, TER, QUA, QUI, SEX));
+
+		Domain<String> atividade = new Domain<>(COMP0455, COMP0481, COMP0408, COMP0409, COMP0438, COMP0412, ELET0043,
+				MAT0096, MAT0154, ESTAT0011, COMP0415, COMP0417, PIBIC, PIBIT, PIBIX, ESTAGIO20, ESTAGIO30, ESTAGIO40,
+				TRABALHO22, TRABALHO44, VOLUNTARIA, PALESTRA, EVENTO, BLOCO, OUTROS);
+
+		for (Variable var : getVariables()) {
+			setDomain(var, atividade);
+		}
+
+//		addConstraint(new NotEqualConstraint<>(WA, NT));
+//		addConstraint(new NotEqualConstraint<>(WA, SA));
+//		addConstraint(new NotEqualConstraint<>(NT, SA));
+//		addConstraint(new NotEqualConstraint<>(NT, Q));
+//		addConstraint(new NotEqualConstraint<>(SA, Q));
+//		addConstraint(new NotEqualConstraint<>(SA, NSW));
+//		addConstraint(new NotEqualConstraint<>(SA, V));
+//		addConstraint(new NotEqualConstraint<>(Q, NSW));
+//		addConstraint(new NotEqualConstraint<>(NSW, V));
+	}
+
+	public Horario3CSP(boolean sabado) {
+
 		super(Arrays.asList(SEG, TER, QUA, QUI, SEX, SAB));
 
 		Domain<String> atividade = new Domain<>(COMP0455, COMP0481, COMP0408, COMP0409, COMP0438, COMP0412, ELET0043,
 				MAT0096, MAT0154, ESTAT0011, COMP0415, COMP0417, PIBIC, PIBIT, PIBIX, ESTAGIO20, ESTAGIO30, ESTAGIO40,
 				TRABALHO22, TRABALHO44, VOLUNTARIA, PALESTRA, EVENTO, BLOCO, OUTROS);
-		
+
 		for (Variable var : getVariables()) {
 			setDomain(var, atividade);
 		}
-			
 
 //		addConstraint(new NotEqualConstraint<>(WA, NT));
 //		addConstraint(new NotEqualConstraint<>(WA, SA));
